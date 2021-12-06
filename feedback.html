@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Задать вопрос</title>
+    <meta charset="utf-8" />
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:300);  
+        .form .first {
+        background: #FFFFFF;
+        max-width: 360px;
+        margin: 0 auto 100px;
+        padding: 45px;
+        text-align: center;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+        } 
+        .form .first input, textarea {
+        font-family: "Roboto", sans-serif;
+        background: #f2f2f2;
+        width: 100%;
+        border: 0;
+        margin: 0 0 15px;
+        padding: 15px;
+        box-sizing: border-box;
+        font-size: 14px;
+        }
+        textarea
+        {
+            resize: none;
+            height:200px;
+        }
+        .form input[type="submit"]:hover,.form input[type="submit"]:active,.form input[type="submit"]:focus {
+        background: #43A047;
+        }
+        h1{
+            font-family: "Roboto", sans-serif;
+            text-align: center;
+        }
+        .form .first p{
+            font-family: "Roboto", sans-serif;
+            text-align: left;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 14px;
+            background: #f2f2f2;
+            margin: 0 0 15px;
+            border: 0;
+            padding: 15px;
+        }
+        ul{
+        list-style: none;
+        margin:0 0 0 0;
+        padding: 0;
+        margin-top: 40px;
+        font-family: "Roboto", sans-serif;
+        text-align: center;
+        font-size: 25px;
+        }
+        li
+        {
+            display:inline;
+            padding:15px; 
+        }
+        a{
+            text-decoration: none;
+        }
+        li:nth-child(3)
+        {
+            background-color: #bcfdbf;
+        }
+        li:hover
+        {
+            background-color: #bcfdbf;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="/authorization.html">Войти</a></li>
+        <li><a href="/">Регистрация</a></li>
+        <li><a href="/feedback.html">Обратная связь</a></li>
+        <li><a href="/feedbackOutput">Заданные вопросы</a></li>
+        <li><a href="/users"> Список пользователей</a></li>
+    </ul>
+    <h1>Задать вопрос</h1>
+    <div class="form">
+        <form method="post" class="first">
+            <input type="text" name="userName" placeholder="Имя" required/>
+            <input type="email" name="userEmail" placeholder="Электронная почта" required/>
+            <textarea placeholder="Вопрос" name="userQuestion" required></textarea>
+            <input type="submit" value="Отправить вопрос"/>
+        </form>
+    </div>
+</body>
+</html>

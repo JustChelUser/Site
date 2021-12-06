@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список пользователей</title>
+    <meta charset="utf-8" />
+        <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:300);  
+        ul{
+        list-style: none;
+        margin:0 0 0 0;
+        padding: 0;
+        margin-top: 40px;
+        font-family: "Roboto", sans-serif;
+        text-align: center;
+        font-size: 25px;
+        }
+        li
+        {
+            display:inline;
+            padding:15px;
+        }
+        a{
+            text-decoration: none;
+        }
+        li:nth-child(5)
+        {
+            background-color: #bcfdbf;
+        }
+        li:hover
+        {
+            background-color: #bcfdbf;
+        }
+        td,th{
+        font-family: "Roboto", sans-serif;
+        text-align: center;
+        font-size: 25px;
+        }
+        h1{
+            font-family: "Roboto", sans-serif;
+            text-align: center;
+        }
+        img{
+            width: 150px;
+            height: 150px;
+        }
+        table{
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>       
+    <ul>
+        <li><a href="/authorization.html">Войти</a></li>
+        <li><a href="/">Регистрация</a></li>
+        <li><a href="/feedback.html">Обратная связь</a></li>
+        <li><a href="/feedbackOutput">Заданные вопросы</a></li>
+        <li><a href="/users"> Список пользователей</a></li>
+    </ul>
+    <h1>Список пользователей</h1>
+    <table>
+         <tr><th>Пользователь</th><th>Электронная почта</th><th>Аватарка</th></tr>
+        {{#each users}}
+            <tr>
+                <td>{{this.userName	}}</td>
+                <td>{{this.email}}</td>               
+                {{CheckAvatar this.login}}
+            </tr>
+        {{/each}}
+    </table>
+</body>
+<html>

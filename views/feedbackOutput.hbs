@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список пользователей</title>
+    <meta charset="utf-8" />
+        <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:300);  
+        ul{
+        list-style: none;
+        margin:0 0 0 0;
+        padding: 0;
+        margin-top: 40px;
+        font-family: "Roboto", sans-serif;
+        text-align: center;
+        font-size: 25px;
+        }
+        li
+        {
+            display:inline;
+            padding:15px;
+        }
+        a{
+            text-decoration: none;
+        }
+        li:nth-child(4)
+        {
+            background-color: #bcfdbf;
+        }
+        li:hover
+        {
+            background-color: #bcfdbf;
+        }
+        td,th{
+        font-family: "Roboto", sans-serif;
+        text-align: center;
+        font-size: 25px;
+        }
+        h1{
+            font-family: "Roboto", sans-serif;
+            text-align: center;
+        }
+        img{
+            width: 150px;
+            height: 150px;
+        }
+        table{
+            margin: 0 auto;
+        }
+        td{
+            word-break: break-all;
+            width: 15em;
+        }
+    </style>
+</head>
+<body>       
+    <ul>
+        <li><a href="/authorization.html">Войти</a></li>
+        <li><a href="/">Регистрация</a></li>
+        <li><a href="/feedback.html">Обратная связь</a></li>
+        <li><a href="/feedbackOutput">Заданные вопросы</a></li>
+        <li><a href="/users"> Список пользователей</a></li>
+    </ul>
+    <h1>Вопросы</h1>
+    <table>
+         <tr><th>Имя</th><th>Электронная почта</th><th>Вопрос</th></tr>
+        {{#each feedback}}
+            <tr>
+                <td>{{this.name	}}</td>
+                <td>{{this.email}}</td>      
+                <td>{{this.question}}</td>             
+            </tr>
+        {{/each}}
+    </table>
+</body>
+<html>
